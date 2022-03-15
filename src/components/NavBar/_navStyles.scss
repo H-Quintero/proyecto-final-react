@@ -1,0 +1,28 @@
+.nav {
+  background-color: rgb(17, 38, 56);
+  height: 85px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__links {
+    margin-right: 8%;
+    display: flex;
+      
+    li {
+      list-style: none;
+      margin-right: 30px;
+      font-size: 1.4rem;
+    }
+  }
+}
+.link  {
+  @include linkForm;
+}
+.logo {
+  height: 60px;
+  margin-left: 60%;
+}
+
+

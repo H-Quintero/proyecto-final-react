@@ -1,0 +1,21 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.link-home {
+  @include linkForm;
+  @include border;
+
+  text-align: center;
+
+  height: 85px;
+  width: 200px;
+
+  margin-top: 30%;
+
+  h1 {
+    padding-top: 10%;
+  }
+}

@@ -1,0 +1,21 @@
+.description-container {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item {
+  padding-right: 5px;
+}
+
+h2 {
+  color: $primaryColor;
+  text-align: center;
+  padding: 10px;
+  
+  @include border;
+}
+
+p {
+  text-transform: capitalize;
+}

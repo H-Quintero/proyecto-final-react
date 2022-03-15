@@ -1,0 +1,18 @@
+@import './variables';
+@import './mixins';
+@import '../components/NavBar/navStyles';
+@import '../pages/Home/homeStyles';
+@import '../pages/People/peopleStyles';
+@import '../components/CardP/cardPStyles';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-image: url(https://fondosmil.com/fondo/23605.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
