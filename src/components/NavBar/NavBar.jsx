@@ -7,7 +7,6 @@ import { useTheme, useUpdateTheme } from "../MyThemeProvider/MyThemeProvider";
 
 export default function NavBar() {
   const darkTheme = useTheme();
-  // const colorF = useState();
   const toggleTheme = useUpdateTheme();
 
   const theme = {
