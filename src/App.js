@@ -14,16 +14,19 @@ import Starships from "./pages/Starships/Starships";
 import Vehicles from "./pages/Vehicles/Vehicles";
 
 function App() {
+
+  //Creamos los estados para todas las llamadas a la API (una por cada página)
   const [people, setPeople] = useState([]);
   const [planets, setPlanets] = useState([]);
   const [starships, setStarships] = useState([]);
   const [vehicles, setVehicles] = useState([]);
   const [species, setEspecies] = useState([]);
 
+
+  //Realizamos la llamada a la API
   useEffect(() => {
     fetch("https://swapi.dev/api/people/")
       .then((res) => res.json())
-      // .then((data) => console.log(data.results))
       .then((data) => setPeople(data.results));
 
     fetch("https://swapi.dev/api/planets/")
