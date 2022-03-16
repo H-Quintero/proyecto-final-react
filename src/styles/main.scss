@@ -11,8 +11,9 @@
 }
 
 .App {
-  background-image: url(https://fondosmil.com/fondo/23605.png);
+  background-image: url($backImgPrimary);
   background-repeat: no-repeat;
   background-size: cover;
+  background-clip: content-box;
   height: 100vh;
 }

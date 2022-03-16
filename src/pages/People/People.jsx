@@ -2,7 +2,6 @@ import React from "react";
 import CardP from "../../components/CardP/CardP";
 
 export default function People({ data }) {
-  
   return (
     <div className="card-container">
       {data.map((people, i) => {

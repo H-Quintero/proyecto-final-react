@@ -13,7 +13,7 @@ export default function CardV({ data }) {
       {isActive && (
         <div className="description-container">
           <div>
-            
+            <strong></strong>
           </div>
           <div></div>
         </div>

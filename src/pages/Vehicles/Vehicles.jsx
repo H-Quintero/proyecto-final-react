@@ -1,5 +1,5 @@
 import React from 'react'
-import CardV from '../../components/CardV/CardV';
+import CardSt from '../../components/CardSt/CardSt';
 
 export default function vehicles({ data }) {
   return (
@@ -7,7 +7,7 @@ export default function vehicles({ data }) {
     {data.map((vehicle, i) => {
       return (
         <div key={i} className="card">
-          <CardV data={vehicle} />      
+          <CardSt data={vehicle} />      
         </div>
       );
     })}
