@@ -7,20 +7,30 @@ import { useTheme, useUpdateTheme } from "../MyThemeProvider/MyThemeProvider";
 
 export default function NavBar() {
   const darkTheme = useTheme();
+  // const colorF = useState();
   const toggleTheme = useUpdateTheme();
 
   const theme = {
-    backgroundColor: darkTheme ? "rgb(149 53 53)" : "rgb(17, 38, 56)",
+    backgroundColor: darkTheme ? "gold" : "rgb(17, 38, 56)",
+    color: !darkTheme ? "gold" : "rgb(17, 38, 56)",
   };
 
   return (
     <nav className="nav" style={theme}>
       <Link to={"/"}>
-        <img
-          src="https://1000marcas.net/wp-content/uploads/2019/12/logo-StarWars.png"
-          alt="imagen"
-          className="logo"
-        />
+        {!darkTheme ? (
+          <img
+            src="https://1000marcas.net/wp-content/uploads/2019/12/logo-StarWars.png"
+            alt="imagen"
+            className="logo"
+          />
+        ) : (
+          <img
+            src="https://logos-marcas.com/wp-content/uploads/2020/11/Star-Wars-Logo.png"
+            alt="imagen"
+            className="logo"
+          />
+        )}
       </Link>
       <div className="nav__links">
         {/* <Link to={"/"} className="link">
@@ -29,27 +39,23 @@ export default function NavBar() {
         <Link style={theme} to={"people"} className="link">
           <li>People</li>
         </Link>
-        <Link to={"planets"} className="link">
+        <Link style={theme} to={"planets"} className="link">
           <li>Planets</li>
         </Link>
-        <Link to={"species"} className="link">
+        <Link style={theme} to={"species"} className="link">
           <li>Species</li>
         </Link>
-        <Link to={"starships"} className="link">
+        <Link style={theme} to={"starships"} className="link">
           <li>Starships</li>
         </Link>
-        <Link to={"vehicles"} className="link">
+        <Link style={theme} to={"vehicles"} className="link">
           <li>Vehicles</li>
         </Link>
         <div onClick={toggleTheme}>
           {darkTheme ? (
-            <StarIcon 
-              sx={{ color: "rgb(17, 38, 56)" }} 
-              fontSize={"large"} />
+            <StarIcon sx={{ color: "rgb(17, 38, 56)" }} fontSize={"large"} />
           ) : (
-            <StarOutlineIcon 
-              sx={{ color: "gold" }} 
-              fontSize={"large"}/>
+            <StarOutlineIcon sx={{ color: "gold" }} fontSize={"large"} />
           )}
         </div>
       </div>
